@@ -1,0 +1,74 @@
+{
+  "schemes": [
+    {
+      "id": 1,
+      "name": "Новая почта",
+      "image": "http://novoposhta.com/images/0.png"
+    },
+    {
+      "id": 2,
+      "name": "Планета кино",
+      "image": "http://www.sumylife.com/wp-content/uploads/2016/01/1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Фишка",
+      "image": "https://www.okko.ua/uploads/news/fishka/319_231_fish.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Рост",
+      "image": "http://barvinkove.com/cms/images/rost.png"
+    },
+    {
+      "id": 5,
+      "name": "Восторг",
+      "image": "http://allretail.ua/media/generated/52/34/5234e0fb20c845258100db26725cdca4.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Львовская мастерская шоколада",
+      "image": "https://img.1kr.ua/place_files/483e80d4/d65a1577/270253_f28ff5d651a6c381685042a6b5235680lhmclogo.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Метро",
+      "image": "https://upload.wikimedia.org/wikipedia/uk/e/e6/Metro-Logo.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Караван",
+      "image": "http://kharkov.dozor.ua/content/documents/11822/1182187/thumb-article-406x282-f7a6.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Дафи",
+      "image": "http://kharkov.dozor.ua/content/documents/11790/1178967/image/Dafi_fs_logo.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Чудо",
+      "image": "https://cdn7.pokupon.ua/uploaded/merchant_pages/2913/logos/original/%D1%87%D1%83%D0%B4%D0%BE.png?1485247913"
+    },
+    {
+      "id": 11,
+      "name": "Мафия",
+      "image": "http://triarh.kz/wp-content/uploads/2014/10/logo_mafia-01.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Япошка",
+      "image": "https://letsbar.com.ua/media/profile/yaposhka_logo.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Colins",
+      "image": "http://img-colinsrus.mncdn.com/Themes/Russia/Content/images/logo.png"
+    },
+    {
+      "id": 14,
+      "name": "Oodjy",
+      "image": "https://skymall.ua/uploads/posts/2014-08/1408699547_oodji.jpg"
+    }
+  ]
+}
