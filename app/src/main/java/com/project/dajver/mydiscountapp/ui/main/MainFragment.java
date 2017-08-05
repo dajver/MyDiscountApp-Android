@@ -1,6 +1,7 @@
 package com.project.dajver.mydiscountapp.ui.main;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -8,7 +9,6 @@ import android.view.MenuItem;
 
 import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.db.DiscountController;
-import com.project.dajver.mydiscountapp.db.model.DiscountModel;
 import com.project.dajver.mydiscountapp.etc.TransitionHelper;
 import com.project.dajver.mydiscountapp.ui.BaseFragment;
 import com.project.dajver.mydiscountapp.ui.main.adapter.MyDiscountRecyclerAdapter;
@@ -19,10 +19,12 @@ import butterknife.BindView;
  * Created by gleb on 8/4/17.
  */
 
-public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdapter.ItemClickListener {
+public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdapter.ItemClickListener, SwipeRefreshLayout.OnRefreshListener {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
+    @BindView(R.id.refresh)
+    SwipeRefreshLayout swipeRefreshLayout;
 
     private MyDiscountRecyclerAdapter myDiscountRecyclerAdapter;
     private DiscountController discountController;
@@ -36,6 +38,12 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     public void onCreateView(Bundle savedInstanceState) {
         discountController = new DiscountController(getContext());
         setupRecyclerView(recyclerView, 2);
+        swipeRefreshLayout.setOnRefreshListener(this);
+
+        setupAdapter();
+    }
+
+    private void setupAdapter() {
         myDiscountRecyclerAdapter = new MyDiscountRecyclerAdapter(getContext(), discountController.getDiscounts());
         myDiscountRecyclerAdapter.setClickListener(this);
         recyclerView.setAdapter(myDiscountRecyclerAdapter);
@@ -47,8 +55,8 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     }
 
     @Override
-    public void onItemClick(DiscountModel discountModel) {
-        TransitionHelper.setDetailsIntent(getContext(), discountModel);
+    public void onItemClick(int id) {
+        TransitionHelper.setDetailsIntent(getContext(), id);
     }
 
     @Override
@@ -65,5 +73,17 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onRefresh() {
+        swipeRefreshLayout.setRefreshing(true);
+        swipeRefreshLayout.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                swipeRefreshLayout.setRefreshing(false);
+                setupAdapter();
+            }
+        }, 3000);
     }
 }

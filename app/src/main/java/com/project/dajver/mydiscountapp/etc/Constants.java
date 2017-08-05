@@ -7,5 +7,6 @@ package com.project.dajver.mydiscountapp.etc;
 public class Constants {
 
     public static final String INTENT_DISCOUNT_MODEL = "discountModel";
+    public static final String INTENT_DISCOUNT_ID = "discountPosition";
 
 }

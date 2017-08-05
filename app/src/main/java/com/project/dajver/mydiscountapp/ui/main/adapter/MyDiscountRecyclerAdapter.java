@@ -66,7 +66,7 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
 
         @Override
         public void onClick(View view) {
-            if (mClickListener != null) mClickListener.onItemClick(discountModels.get(getAdapterPosition()));
+            if (mClickListener != null) mClickListener.onItemClick(discountModels.get(getAdapterPosition()).getId());
         }
     }
 
@@ -79,6 +79,6 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
     }
 
     public interface ItemClickListener {
-        void onItemClick(DiscountModel discountModel);
+        void onItemClick(int id);
     }
 }

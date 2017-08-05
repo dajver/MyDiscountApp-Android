@@ -39,13 +39,16 @@ public class DiscountController {
         return realm.where(DiscountModel.class).findAll();
     }
 
-    public void updateInfo(int id, String title, String code, String image) {
+    public DiscountModel getDiscountsById(int id) {
+        return realm.where(DiscountModel.class).equalTo("id", id).findFirst();
+    }
+
+    public void updateInfo(int id, String title, String code) {
         realm.beginTransaction();
 
         DiscountModel discountModel = realm.where(DiscountModel.class).equalTo("id", id).findFirst();
         discountModel.setName(title);
         discountModel.setCode(code);
-        discountModel.setImage(image);
 
         realm.commitTransaction();
     }

@@ -10,6 +10,7 @@ import com.project.dajver.mydiscountapp.etc.parser.model.DataDetailsModel;
 import com.project.dajver.mydiscountapp.ui.add.AddDiscountActivity;
 import com.project.dajver.mydiscountapp.ui.main.MainActivity;
 import com.project.dajver.mydiscountapp.ui.main.details.DiscountDetailsActivity;
+import com.project.dajver.mydiscountapp.ui.main.details.edit.EditDetailsActivity;
 
 /**
  * Created by gleb on 8/5/17.
@@ -17,15 +18,9 @@ import com.project.dajver.mydiscountapp.ui.main.details.DiscountDetailsActivity;
 
 public class TransitionHelper {
 
-    public static void setDetailsIntent(Context context, DiscountModel discountModel) {
-        DataDetailsModel dataDetailsModel = new DataDetailsModel();
-        dataDetailsModel.setId(discountModel.getId());
-        dataDetailsModel.setCode(discountModel.getCode());
-        dataDetailsModel.setName(discountModel.getName());
-        dataDetailsModel.setImage(discountModel.getImage());
-
+    public static void setDetailsIntent(Context context, int position) {
         Intent intent = new Intent(context, DiscountDetailsActivity.class);
-        intent.putExtra(Constants.INTENT_DISCOUNT_MODEL, dataDetailsModel);
+        intent.putExtra(Constants.INTENT_DISCOUNT_ID, position);
         context.startActivity(intent);
         setAnimation(context);
     }
@@ -56,6 +51,19 @@ public class TransitionHelper {
     public static void setMainIntent(Context context) {
         context.startActivity(new Intent(context, MainActivity.class));
         ((Activity) context).finish();
+        setAnimation(context);
+    }
+
+    public static void setEditIntent(Context context, DiscountModel discountModel) {
+        DataDetailsModel dataDetailsModel = new DataDetailsModel();
+        dataDetailsModel.setId(discountModel.getId());
+        dataDetailsModel.setCode(discountModel.getCode());
+        dataDetailsModel.setName(discountModel.getName());
+        dataDetailsModel.setImage(discountModel.getImage());
+
+        Intent i = new Intent(context, EditDetailsActivity.class);
+        i.putExtra(Constants.INTENT_DISCOUNT_MODEL, dataDetailsModel);
+        context.startActivity(i);
         setAnimation(context);
     }
 

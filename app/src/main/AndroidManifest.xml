@@ -33,7 +33,8 @@
             android:name=".ui.add.AddDiscountActivity"
             android:label="@string/screen.add"/>
 
-        <activity android:name=".ui.add.capture.CaptureActivity" />
+        <activity android:name=".ui.main.details.edit.EditDetailsActivity"
+            android:label="@string/screen.edit"/>
 
     </application>
 
