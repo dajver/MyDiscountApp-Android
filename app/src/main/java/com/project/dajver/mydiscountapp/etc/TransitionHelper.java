@@ -18,28 +18,17 @@ import com.project.dajver.mydiscountapp.ui.main.details.edit.EditDetailsActivity
 
 public class TransitionHelper {
 
-    public static void setDetailsIntent(Context context, int position) {
+    public static void setDetailsIntent(Context context, int id, boolean isFinish) {
         Intent intent = new Intent(context, DiscountDetailsActivity.class);
-        intent.putExtra(Constants.INTENT_DISCOUNT_ID, position);
+        intent.putExtra(Constants.INTENT_DISCOUNT_ID, id);
         context.startActivity(intent);
+        if(isFinish)
+            ((Activity) context).finish();
         setAnimation(context);
     }
 
     public static void setAddIntent(Context context) {
         context.startActivity(new Intent(context, AddDiscountActivity.class));
-        setAnimation(context);
-    }
-
-    public static void setDetailsIntent(Context context, DataDetailsModel dataDetailsModel, String code) {
-        DataDetailsModel discountModel = new DataDetailsModel();
-        discountModel.setId(dataDetailsModel.getId());
-        discountModel.setCode(code);
-        discountModel.setName(dataDetailsModel.getName());
-        discountModel.setImage(dataDetailsModel.getImage());
-
-        Intent i = new Intent(context, DiscountDetailsActivity.class);
-        i.putExtra(Constants.INTENT_DISCOUNT_MODEL, discountModel);
-        context.startActivity(i);
         setAnimation(context);
     }
 

@@ -65,4 +65,8 @@ public class DiscountController {
     private int getNextKey() {
         return realm.where(DiscountModel.class).max("id").intValue() + 1;
     }
+
+    public int getCurrentId() {
+        return getNextKey() - 1;
+    }
 }

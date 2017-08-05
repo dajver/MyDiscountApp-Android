@@ -53,8 +53,9 @@ public class AddDiscountFragment extends BaseFragment implements DiscountCardsRe
         if(resultCode != RESULT_CANCELED) {
             IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
             if (scanningResult != null) {
-                new DiscountController(getContext()).addDiscount(dataDetailsModel.getName(), scanningResult.getContents(), dataDetailsModel.getImage());
-                TransitionHelper.setDetailsIntent(getContext(), dataDetailsModel, scanningResult.getContents());
+                DiscountController discountController = new DiscountController(getContext());
+                discountController.addDiscount(dataDetailsModel.getName(), scanningResult.getContents(), dataDetailsModel.getImage());
+                TransitionHelper.setDetailsIntent(getContext(), discountController.getCurrentId(), true);
             }
         }
     }

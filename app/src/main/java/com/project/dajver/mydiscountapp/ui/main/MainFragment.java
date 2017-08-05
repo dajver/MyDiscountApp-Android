@@ -62,7 +62,7 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
 
     @Override
     public void onItemClick(int id) {
-        TransitionHelper.setDetailsIntent(getContext(), id);
+        TransitionHelper.setDetailsIntent(getContext(), id, false);
     }
 
     @Override
