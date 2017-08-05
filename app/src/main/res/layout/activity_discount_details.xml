@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
     <fragment
         android:id="@+id/discountDetails"
-        android:name="com.project.dajver.mydiscountapp.ui.details.DiscountDetailsFragment"
+        android:name="com.project.dajver.mydiscountapp.ui.main.details.DiscountDetailsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_discount_details"

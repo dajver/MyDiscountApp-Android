@@ -9,4 +9,9 @@ public class MainActivity extends BaseActivity {
     public int getItemId() {
         return R.layout.activity_main;
     }
+
+    @Override
+    public boolean isSlidrActive() {
+        return false;
+    }
 }

@@ -19,6 +19,11 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:25.3.1'
@@ -35,4 +40,6 @@ dependencies {
     compile 'io.realm:realm-android:0.87.+'
 
     compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.r0adkll:slidableactivity:2.0.5'
 }

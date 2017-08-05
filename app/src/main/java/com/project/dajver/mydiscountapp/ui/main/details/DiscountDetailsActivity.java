@@ -1,4 +1,4 @@
-package com.project.dajver.mydiscountapp.ui.details;
+package com.project.dajver.mydiscountapp.ui.main.details;
 
 import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.ui.BaseActivity;
@@ -12,5 +12,10 @@ public class DiscountDetailsActivity extends BaseActivity {
     @Override
     public int getItemId() {
         return R.layout.activity_discount_details;
+    }
+
+    @Override
+    public boolean isSlidrActive() {
+        return true;
     }
 }

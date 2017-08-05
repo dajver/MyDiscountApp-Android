@@ -1,6 +1,6 @@
 package com.project.dajver.mydiscountapp.ui.main;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -9,10 +9,8 @@ import android.view.MenuItem;
 import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.db.DiscountController;
 import com.project.dajver.mydiscountapp.db.model.DiscountModel;
-import com.project.dajver.mydiscountapp.etc.Constants;
+import com.project.dajver.mydiscountapp.etc.TransitionHelper;
 import com.project.dajver.mydiscountapp.ui.BaseFragment;
-import com.project.dajver.mydiscountapp.ui.add.AddDiscountActivity;
-import com.project.dajver.mydiscountapp.ui.details.DiscountDetailsActivity;
 import com.project.dajver.mydiscountapp.ui.main.adapter.MyDiscountRecyclerAdapter;
 
 import butterknife.BindView;
@@ -35,7 +33,7 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     }
 
     @Override
-    public void onCreateView() {
+    public void onCreateView(Bundle savedInstanceState) {
         discountController = new DiscountController(getContext());
         setupRecyclerView(recyclerView, 2);
         myDiscountRecyclerAdapter = new MyDiscountRecyclerAdapter(getContext(), discountController.getDiscounts());
@@ -44,10 +42,13 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     }
 
     @Override
+    public boolean isBackButtonActive() {
+        return false;
+    }
+
+    @Override
     public void onItemClick(DiscountModel discountModel) {
-        Intent intent = new Intent(getContext(), DiscountDetailsActivity.class);
-        intent.putExtra(Constants.INTENT_DISCOUNT_MODEL, discountModel);
-        startActivity(intent);
+        TransitionHelper.setDetailsIntent(getContext(), discountModel);
     }
 
     @Override
@@ -60,7 +61,7 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_add) {
-            startActivity(new Intent(getContext(), AddDiscountActivity.class));
+            TransitionHelper.setAddIntent(getContext());
             return true;
         }
         return super.onOptionsItemSelected(item);

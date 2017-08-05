@@ -1,14 +1,12 @@
 package com.project.dajver.mydiscountapp.db.model;
 
-import java.io.Serializable;
-
 import io.realm.RealmObject;
 
 /**
  * Created by gleb on 8/4/17.
  */
 
-public class DiscountModel extends RealmObject implements Serializable {
+public class DiscountModel extends RealmObject {
 
     private int id;
     private String name;
