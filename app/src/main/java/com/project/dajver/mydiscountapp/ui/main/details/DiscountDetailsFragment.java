@@ -24,6 +24,8 @@ import com.project.dajver.mydiscountapp.ui.BaseFragment;
 
 import butterknife.BindView;
 
+import static com.project.dajver.mydiscountapp.etc.Constants.ON_REFRESH_TIME_OUT;
+
 /**
  * Created by gleb on 8/4/17.
  */
@@ -38,6 +40,7 @@ public class DiscountDetailsFragment extends BaseFragment implements SwipeRefres
     SwipeRefreshLayout swipeRefreshLayout;
 
     private DiscountModel discountModel;
+    private boolean isFirstStart = true;
 
     @Override
     public int getItemId() {
@@ -50,7 +53,6 @@ public class DiscountDetailsFragment extends BaseFragment implements SwipeRefres
         discountModel = new DiscountController(getContext()).getDiscountsById(id);
 
         swipeRefreshLayout.setOnRefreshListener(this);
-
         setupViews();
 
         Settings.System.putInt(getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 20);
@@ -75,7 +77,7 @@ public class DiscountDetailsFragment extends BaseFragment implements SwipeRefres
                 swipeRefreshLayout.setRefreshing(false);
                 setupViews();
             }
-        }, 3000);
+        }, ON_REFRESH_TIME_OUT);
     }
 
     @Override
@@ -91,6 +93,13 @@ public class DiscountDetailsFragment extends BaseFragment implements SwipeRefres
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+    public void onResume() {
+        super.onResume();
+        if(!isFirstStart)
+            onRefresh();
+        isFirstStart = false;
     }
 
     @Override

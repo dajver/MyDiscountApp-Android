@@ -17,6 +17,8 @@ import com.project.dajver.mydiscountapp.ui.main.adapter.MyDiscountRecyclerAdapte
 
 import butterknife.BindView;
 
+import static com.project.dajver.mydiscountapp.etc.Constants.ON_REFRESH_TIME_OUT;
+
 /**
  * Created by gleb on 8/4/17.
  */
@@ -31,6 +33,7 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
 
     private MyDiscountRecyclerAdapter myDiscountRecyclerAdapter;
     private DiscountController discountController;
+    private boolean isFirstStart = true;
 
     @Override
     public int getItemId() {
@@ -101,6 +104,13 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
         return super.onOptionsItemSelected(item);
     }
 
+    public void onResume() {
+        super.onResume();
+        if(!isFirstStart)
+            onRefresh();
+        isFirstStart = false;
+    }
+
     @Override
     public void onRefresh() {
         swipeRefreshLayout.setRefreshing(true);
@@ -110,6 +120,6 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
                 swipeRefreshLayout.setRefreshing(false);
                 setupAdapter();
             }
-        }, 3000);
+        }, ON_REFRESH_TIME_OUT);
     }
 }

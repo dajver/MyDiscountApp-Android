@@ -7,13 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.etc.TransitionHelper;
 
+import static com.project.dajver.mydiscountapp.etc.Constants.SPLASH_TIME_OUT;
+
 /**
  * Created by gleb on 8/5/17.
  */
 
 public class SplashActivity extends AppCompatActivity {
-
-    private static int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
