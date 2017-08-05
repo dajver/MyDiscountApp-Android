@@ -1,74 +1,128 @@
 {
   "schemes": [
     {
-      "id": 1,
       "name": "Новая почта",
       "image": "http://novoposhta.com/images/0.png"
     },
     {
-      "id": 2,
       "name": "Планета кино",
       "image": "http://www.sumylife.com/wp-content/uploads/2016/01/1.jpg"
     },
     {
-      "id": 3,
       "name": "Фишка",
       "image": "https://www.okko.ua/uploads/news/fishka/319_231_fish.jpg"
     },
     {
-      "id": 4,
       "name": "Рост",
       "image": "http://barvinkove.com/cms/images/rost.png"
     },
     {
-      "id": 5,
       "name": "Восторг",
       "image": "http://allretail.ua/media/generated/52/34/5234e0fb20c845258100db26725cdca4.jpg"
     },
     {
-      "id": 6,
-      "name": "Львовская мастерская шоколада",
-      "image": "https://img.1kr.ua/place_files/483e80d4/d65a1577/270253_f28ff5d651a6c381685042a6b5235680lhmclogo.jpg"
+      "name": "Класс",
+      "image": "http://www.shary.ua/sites/default/files/types/trade_center/logo/shary_KLASS_MARKET_logo_3.png"
     },
     {
-      "id": 7,
-      "name": "Метро",
+      "name": "Сильпо",
+      "image": "http://ukraina.zp.ua/assets/uploads/files/567b8-silpo-zaporozhe-ul-charivna-155b1372995207.jpg"
+    },
+    {
+      "name": "Французкий бульвар",
+      "image": "http://tic.kh.ua/sites/default/files/images/trcfb.jpg"
+    },
+    {
+      "name": "METRO",
       "image": "https://upload.wikimedia.org/wikipedia/uk/e/e6/Metro-Logo.jpg"
     },
     {
-      "id": 8,
       "name": "Караван",
       "image": "http://kharkov.dozor.ua/content/documents/11822/1182187/thumb-article-406x282-f7a6.jpg"
     },
     {
-      "id": 9,
       "name": "Дафи",
       "image": "http://kharkov.dozor.ua/content/documents/11790/1178967/image/Dafi_fs_logo.jpg"
     },
     {
-      "id": 10,
       "name": "Чудо",
       "image": "https://cdn7.pokupon.ua/uploaded/merchant_pages/2913/logos/original/%D1%87%D1%83%D0%B4%D0%BE.png?1485247913"
     },
     {
-      "id": 11,
       "name": "Мафия",
       "image": "http://triarh.kz/wp-content/uploads/2014/10/logo_mafia-01.jpg"
     },
     {
-      "id": 12,
       "name": "Япошка",
       "image": "https://letsbar.com.ua/media/profile/yaposhka_logo.jpg"
     },
     {
-      "id": 13,
+      "name": "Львовская мастерская шоколада",
+      "image": "https://img.1kr.ua/place_files/483e80d4/d65a1577/270253_f28ff5d651a6c381685042a6b5235680lhmclogo.jpg"
+    },
+    {
+      "name": "Aroma kava",
+      "image": "http://tabletochki.org/site_files/partners/%D0%BB%D0%BE%D0%B3%D0%BE-%D0%90%D1%80%D0%BE%D0%BC%D0%B0-%D0%A1%D0%9C%D0%A3%D0%9A.png"
+    },
+    {
       "name": "Colins",
       "image": "http://img-colinsrus.mncdn.com/Themes/Russia/Content/images/logo.png"
     },
     {
-      "id": 14,
       "name": "Oodjy",
       "image": "https://skymall.ua/uploads/posts/2014-08/1408699547_oodji.jpg"
+    },
+    {
+      "name": "Gloria jeans",
+      "image": "http://gejzer.ru/wp-content/uploads/2014/05/Brend.png"
+    },
+    {
+      "name": "INCITY",
+      "image": "http://arz-plaza.ru/img/logos/incity.png"
+    },
+    {
+      "name": "OSTIN",
+      "image": "http://toplogos.ru/images/logo-ostin.jpg"
+    },
+    {
+      "name": "MEGASPORT",
+      "image": "https://megasport.ua/public/images/for-fb.png"
+    },
+    {
+      "name": "Kari club",
+      "image": "http://kari.com/local/templates/kari/elements/loan/img/kari-logo.png"
+    },
+    {
+      "name": "Eva",
+      "image": "http://zabor.zp.ua/diz/magazin/eva/logo.jpg"
+    },
+    {
+      "name": "PROSTOR",
+      "image": "http://sd.ua/files/hot/i.jpeg"
+    },
+    {
+      "name": "Аптека Здоров-я",
+      "image": "http://shop.guru.ua/img/logo/92822_big.jpg"
+    },
+    {
+      "name": "Аптека низких цен",
+      "image": "https://koloro.ua/media/upload/images/razrabotka-firmennogo-stilya-aptek%20%284%29.jpg"
+    },
+    {
+      "name": "Аптека оптовых цен",
+      "image": "http://private-label.com.ua/uploads/clients_spr/21/small/19f1de2f741b5da16c63581ac791bfdb044a5d4e_thumbnailImage_400x400_true.jpg"
+    },
+    {
+      "name": "Танец огня",
+      "image": "http://cfo.spr.ru/pages_logotip/2016-07/42067.png"
+    },
+    {
+      "name": "925",
+      "image": "http://www.komod.co.ua/uploaded/news/429071_314679428641235_131052010_n.jpg"
+    },
+    {
+      "name": "INGLOT",
+      "image": "http://meganom.net/wp-content/uploads/Inglot_logo_white.png"
     }
   ]
 }

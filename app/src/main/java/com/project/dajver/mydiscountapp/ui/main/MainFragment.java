@@ -50,9 +50,11 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     }
 
     private void setupAdapter() {
-        myDiscountRecyclerAdapter = new MyDiscountRecyclerAdapter(getContext(), discountController.getDiscounts());
-        myDiscountRecyclerAdapter.setClickListener(this);
-        recyclerView.setAdapter(myDiscountRecyclerAdapter);
+        if(isAdded()) {
+            myDiscountRecyclerAdapter = new MyDiscountRecyclerAdapter(getContext(), discountController.getDiscounts());
+            myDiscountRecyclerAdapter.setClickListener(this);
+            recyclerView.setAdapter(myDiscountRecyclerAdapter);
+        }
     }
 
     @Override

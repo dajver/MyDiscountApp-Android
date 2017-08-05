@@ -62,10 +62,12 @@ public class DiscountDetailsFragment extends BaseFragment implements SwipeRefres
     }
 
     private void setupViews() {
-        cardImage.setImageBitmap(generateBarcode(discountModel.getCode()));
-        cardCode.setText(discountModel.getCode());
+        if(isAdded()) {
+            cardImage.setImageBitmap(generateBarcode(discountModel.getCode()));
+            cardCode.setText(discountModel.getCode());
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(discountModel.getName());
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(discountModel.getName());
+        }
     }
 
     @Override
