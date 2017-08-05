@@ -51,7 +51,7 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
         return discountModels.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
         @BindView(R.id.name)
         TextView name;
@@ -62,11 +62,18 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
             super(itemView);
             ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
             if (mClickListener != null) mClickListener.onItemClick(discountModels.get(getAdapterPosition()).getId());
+        }
+
+        @Override
+        public boolean onLongClick(View view) {
+            if (mClickListener != null) mClickListener.onLongItemClick(discountModels.get(getAdapterPosition()).getId());
+            return false;
         }
     }
 
@@ -80,5 +87,6 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
 
     public interface ItemClickListener {
         void onItemClick(int id);
+        void onLongItemClick(int id);
     }
 }

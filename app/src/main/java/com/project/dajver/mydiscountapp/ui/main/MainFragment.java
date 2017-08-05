@@ -1,7 +1,9 @@
 package com.project.dajver.mydiscountapp.ui.main;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,7 +21,8 @@ import butterknife.BindView;
  * Created by gleb on 8/4/17.
  */
 
-public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdapter.ItemClickListener, SwipeRefreshLayout.OnRefreshListener {
+public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdapter.ItemClickListener,
+        SwipeRefreshLayout.OnRefreshListener {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -57,6 +60,29 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     @Override
     public void onItemClick(int id) {
         TransitionHelper.setDetailsIntent(getContext(), id);
+    }
+
+    @Override
+    public void onLongItemClick(final int id) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(getString(R.string.alert_dialog_title))
+                .setMessage(getString(R.string.alert_dialog_description))
+                .setCancelable(false)
+                .setNegativeButton(getString(R.string.alert_dialog_no), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        })
+                .setPositiveButton(getString(R.string.alert_dialog_yes), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        new DiscountController(getContext()).removeItemById(id);
+                        onRefresh();
+                        dialogInterface.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     @Override

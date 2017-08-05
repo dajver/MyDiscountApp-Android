@@ -11,4 +11,10 @@
     <string name="edittext.code">Code</string>
 
     <string name="button.save">Save</string>
+
+    <string name="alert.dialog.title">Delete item</string>
+    <string name="alert.dialog.description">Are you sure that you want delete this item?</string>
+    <string name="alert.dialog.yes">Yes</string>
+    <string name="alert.dialog.no">No</string>
+
 </resources>
