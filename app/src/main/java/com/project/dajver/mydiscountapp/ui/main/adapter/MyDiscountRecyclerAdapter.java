@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.db.model.DiscountModel;
@@ -35,14 +34,13 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.item_discount, parent, false);
+        View view = mInflater.inflate(R.layout.item_my_discount, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.name.setText(getItem(position).getName());
         Picasso.with(context).load(getItem(position).getImage()).into(holder.image);
     }
 
@@ -53,8 +51,6 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
-        @BindView(R.id.name)
-        TextView name;
         @BindView(R.id.image)
         ImageView image;
 
