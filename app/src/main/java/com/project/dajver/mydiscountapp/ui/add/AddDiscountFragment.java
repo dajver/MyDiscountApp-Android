@@ -3,6 +3,10 @@ package com.project.dajver.mydiscountapp.ui.add;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -22,7 +26,8 @@ import static android.app.Activity.RESULT_CANCELED;
  * Created by gleb on 8/4/17.
  */
 
-public class AddDiscountFragment extends BaseFragment implements DiscountCardsRecyclerAdapter.ItemClickListener {
+public class AddDiscountFragment extends BaseFragment implements DiscountCardsRecyclerAdapter.ItemClickListener,
+        SearchView.OnQueryTextListener {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -64,5 +69,25 @@ public class AddDiscountFragment extends BaseFragment implements DiscountCardsRe
     public void onItemClick(DataDetailsModel dataDetailsModel) {
         this.dataDetailsModel = dataDetailsModel;
         IntentIntegrator.forSupportFragment(this).initiateScan();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_add_discount_search, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(this);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+    @Override
+    public boolean onQueryTextChange(String s) {
+        discountCardsRecyclerAdapter.getFilter().filter(s.toString());
+        return false;
     }
 }

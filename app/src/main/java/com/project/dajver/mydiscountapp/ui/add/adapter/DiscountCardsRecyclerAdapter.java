@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,16 +24,20 @@ import butterknife.ButterKnife;
  * Created by gleb on 8/4/17.
  */
 
-public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<DiscountCardsRecyclerAdapter.ViewHolder> {
+public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<DiscountCardsRecyclerAdapter.ViewHolder>
+        implements Filterable {
 
     private List<DataDetailsModel> dataModels = new ArrayList<>();
+    private List<DataDetailsModel> dataSearchModels = new ArrayList<>();
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
     private Context context;
+    private Filter filter;
 
     public DiscountCardsRecyclerAdapter(Context context, List<DataDetailsModel> dataModels) {
         this.mInflater = LayoutInflater.from(context);
         this.dataModels = dataModels;
+        this.dataSearchModels = dataModels;
         this.context = context;
     }
 
@@ -74,6 +80,41 @@ public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<DiscountC
 
     public DataDetailsModel getItem(int id) {
         return dataModels.get(id);
+    }
+
+    @Override
+    public Filter getFilter() {
+        if(filter == null)
+            filter = new DiscountsFilter();
+        return filter;
+    }
+
+    private class DiscountsFilter extends Filter {
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults results = new FilterResults();
+            if (constraint.length() == 0) {
+                results.values = dataSearchModels;
+                results.count = dataSearchModels.size();
+            } else {
+                ArrayList<DataDetailsModel> dataDetailsModels = new ArrayList<>();
+                for (DataDetailsModel s : dataModels) {
+                    if (s.getName().toUpperCase().trim().contains(constraint.toString().toUpperCase().trim())) {
+                        dataDetailsModels.add(s);
+                    }
+                }
+                results.values = dataDetailsModels;
+                results.count = dataDetailsModels.size();
+            }
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            dataModels = (ArrayList<DataDetailsModel>) results.values;
+            notifyDataSetChanged();
+        }
     }
 
     public void setClickListener(ItemClickListener itemClickListener) {

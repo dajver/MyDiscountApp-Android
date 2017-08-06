@@ -4,6 +4,8 @@ import android.content.Context;
 
 import com.project.dajver.mydiscountapp.db.model.DiscountModel;
 
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
@@ -35,12 +37,16 @@ public class DiscountController {
         realm.commitTransaction();
     }
 
-    public RealmResults<DiscountModel> getDiscounts() {
-        return realm.where(DiscountModel.class).findAll();
+    public ArrayList<DiscountModel> getDiscounts() {
+        return new ArrayList(realm.where(DiscountModel.class).findAll());
     }
 
     public DiscountModel getDiscountsById(int id) {
         return realm.where(DiscountModel.class).equalTo("id", id).findFirst();
+    }
+
+    public ArrayList<DiscountModel> getDiscountByName(String name) {
+        return new ArrayList(realm.where(DiscountModel.class).contains("name", name).findAll());
     }
 
     public void updateInfo(int id, String title, String code) {

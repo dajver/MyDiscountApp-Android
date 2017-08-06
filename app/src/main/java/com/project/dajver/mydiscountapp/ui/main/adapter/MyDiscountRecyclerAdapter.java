@@ -11,9 +11,10 @@ import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.db.model.DiscountModel;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.realm.RealmResults;
 
 /**
  * Created by gleb on 8/4/17.
@@ -21,12 +22,12 @@ import io.realm.RealmResults;
 
 public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRecyclerAdapter.ViewHolder> {
 
-    private RealmResults<DiscountModel> discountModels = null;
+    private ArrayList<DiscountModel> discountModels =  new ArrayList<>();
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
     private Context context;
 
-    public MyDiscountRecyclerAdapter(Context context, RealmResults<DiscountModel> discountModels) {
+    public MyDiscountRecyclerAdapter(Context context, ArrayList<DiscountModel> discountModels) {
         this.mInflater = LayoutInflater.from(context);
         this.discountModels = discountModels;
         this.context = context;
