@@ -18,7 +18,11 @@
     },
     {
       "name": "Shell",
-      "image": ""
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/shell.png?raw=true"
+    },
+    {
+      "name": "WOG",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/wog.jpg?raw=true"
     },
     {
       "name": "Рост",
@@ -43,6 +47,10 @@
     {
       "name": "METRO",
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/metro.jpg?raw=true"
+    },
+    {
+      "name": "Велика кишеня",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/velika_kishenya.jpeg?raw=true"
     },
     {
       "name": "Comfy",
@@ -121,6 +129,10 @@
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/lvivska_kavyarnya.jpg?raw=true"
     },
     {
+      "name": "Starbucks",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/starbacks.png?raw=true"
+    },
+    {
       "name": "Aroma kava",
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/aroma_kava.png?raw=true"
     },
@@ -149,8 +161,16 @@
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/colins.png?raw=true"
     },
     {
+      "name": "Wallker",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/wallker.jpg?raw=true"
+    },
+    {
       "name": "Oodjy",
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/odjji.jpg?raw=true"
+    },
+    {
+      "name": "SOLO",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/solo.png?raw=true"
     },
     {
       "name": "Sealine",
@@ -177,8 +197,24 @@
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/ostin.jpg?raw=true"
     },
     {
+      "name": "Women Secrets",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/women_secrets.png?raw=true"
+    },
+    {
       "name": "MEGASPORT",
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/megasport.png?raw=true"
+    },
+    {
+      "name": "INGLOT",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/inglot.png?raw=true"
+    },
+    {
+      "name": "Спортмастер",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/sportmaster.png?raw=true"
+    },
+    {
+      "name": "Springfield",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/springfield.jpg?raw=true"
     },
     {
       "name": "iSEi",
@@ -195,6 +231,10 @@
     {
       "name": "Eva",
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/eva.jpg?raw=true"
+    },
+    {
+      "name": "WATSONS",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/watsons.jpg?raw=true"
     },
     {
       "name": "Mexx",
@@ -239,10 +279,6 @@
     {
       "name": "925",
       "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/925.jpg?raw=true"
-    },
-    {
-      "name": "INGLOT",
-      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/inglot.png?raw=true"
     }
   ]
 }
