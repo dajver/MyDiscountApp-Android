@@ -6,127 +6,243 @@
     },
     {
       "name": "Новая почта",
-      "image": "https://habrastorage.org/web/52b/c4d/733/52bc4d733f374a6e8dd87a0269885bbe.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/novaya_post.png?raw=true"
     },
     {
       "name": "Планета кино",
-      "image": "https://habrastorage.org/web/b83/cc5/59b/b83cc559b37d4cae93de07f1d8973734.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/planeta_kino.jpg?raw=true"
     },
     {
       "name": "Фишка",
-      "image": "https://habrastorage.org/web/ca4/23e/c85/ca423ec85093470ab4ce7fa2ed72f29c.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/fishka.jpg?raw=true"
+    },
+    {
+      "name": "Shell",
+      "image": ""
     },
     {
       "name": "Рост",
-      "image": "https://habrastorage.org/web/ec8/cab/42e/ec8cab42e5fd4529854d87eb564c65ea.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/rost.png?raw=true"
     },
     {
       "name": "Восторг",
-      "image": "https://habrastorage.org/web/b3d/a61/2ed/b3da612ed1664aa887fc5cc3935313fd.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/vostorg.jpg?raw=true"
     },
     {
       "name": "Класс",
-      "image": "https://habrastorage.org/web/143/ef7/b01/143ef7b0150349fcb07a93b15a700f20.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/klass.png?raw=true"
     },
     {
       "name": "Сильпо",
-      "image": "https://habrastorage.org/web/d94/a15/212/d94a15212bee4fb6822cc0ff12a0ff3c.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/silpo.jpg?raw=true"
     },
     {
       "name": "Французкий бульвар",
-      "image": "https://habrastorage.org/web/321/e88/06c/321e8806c74f42e687e6ebd5bd089ccc.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/franch_bulvar.jpg?raw=true"
     },
     {
       "name": "METRO",
-      "image": "https://habrastorage.org/web/ab2/006/b39/ab2006b39602456b9e10ebb8a71d068d.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/metro.jpg?raw=true"
+    },
+    {
+      "name": "Comfy",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/comfy.png?raw=true"
+    },
+    {
+      "name": "Дом посуды",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/dom_posudi.jpeg?raw=true"
+    },
+    {
+      "name": "ECOLIFE",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/ecolife.png?raw=true"
+    },
+    {
+      "name": "Эльдорадо",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/ekljrado.png?raw=true"
     },
     {
       "name": "Караван",
-      "image": "https://habrastorage.org/web/869/9c5/be4/8699c5be46274608beeaee0d4f779f92.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/karavan.jpg?raw=true"
     },
     {
       "name": "Дафи",
-      "image": "https://habrastorage.org/web/25f/b54/2ba/25fb542ba877489491bab389854c5964.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/dafi.jpg?raw=true"
+    },
+    {
+      "name": "Эпицентр",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/epizentr.png?raw=true"
+    },
+    {
+      "name": "Новая линия",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/novaya_linia.jpg?raw=true"
+    },
+    {
+      "name": "Фокстрот",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/fokstrot.jpg?raw=true"
     },
     {
       "name": "Чудо",
-      "image": "https://habrastorage.org/web/389/a70/435/389a7043527249e58172c76362e7a683.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/chudo.png?raw=true"
+    },
+    {
+      "name": "Брусничка",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/brusnichka.png?raw=true"
+    },
+    {
+      "name": "Фора",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/fora.jpg?raw=true"
+    },
+    {
+      "name": "Фуршет",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/furshet.png?raw=true"
+    },
+    {
+      "name": "Рыбный мир",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/ribniy_svit.jpeg?raw=true"
+    },
+    {
+      "name": "ЖЖУК",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/jjuk.png?raw=true"
+    },
+    {
+      "name": "Ковчег",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/kovcheg.png?raw=true"
     },
     {
       "name": "Мафия",
-      "image": "https://habrastorage.org/web/a2e/aac/d49/a2eaacd495f24552bb1aff08c7f4add9.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/mafia.jpg?raw=true"
     },
     {
       "name": "Япошка",
-      "image": "https://habrastorage.org/web/93e/2ac/e66/93e2ace666e048be8aa018c38134ab08.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/yaposhka.jpg?raw=true"
     },
     {
       "name": "Львовская мастерская шоколада",
-      "image": "https://habrastorage.org/web/a3b/53d/6cb/a3b53d6cb0624473af5542081503233e.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/lvivska_kavyarnya.jpg?raw=true"
     },
     {
       "name": "Aroma kava",
-      "image": "https://habrastorage.org/web/2bd/014/857/2bd014857d8343f1a2a58e6465e90edf.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/aroma_kava.png?raw=true"
+    },
+    {
+      "name": "Accessorize",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/accessorise.jpg?raw=true"
+    },
+    {
+      "name": "Carlo Pazolini",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/carlo_pazolini.jpeg?raw=true"
+    },
+    {
+      "name": "BabyZone",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/babyzone.jpg?raw=true"
+    },
+    {
+      "name": "Bembi",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/bemby.jpg?raw=true"
+    },
+    {
+      "name": "MaGo kids",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/mago_kids.png?raw=true"
     },
     {
       "name": "Colins",
-      "image": "https://habrastorage.org/web/6e2/57e/c40/6e257ec406164640a00da384cf35e86e.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/colins.png?raw=true"
     },
     {
       "name": "Oodjy",
-      "image": "https://habrastorage.org/web/052/a27/34f/052a2734f5624e7cb5fa9299c63ca076.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/odjji.jpg?raw=true"
+    },
+    {
+      "name": "Sealine",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/sealine.jpg?raw=true"
+    },
+    {
+      "name": "Peacocks",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/peackoks.jpg?raw=true"
+    },
+    {
+      "name": "Pedro de Hierro",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/pedro_de_hiero.png?raw=true"
     },
     {
       "name": "Gloria jeans",
-      "image": "https://habrastorage.org/web/ef9/32c/532/ef932c5326564aed91c742763aa4b04b.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/gloria_jeanc.png?raw=true"
     },
     {
       "name": "INCITY",
-      "image": "https://habrastorage.org/web/5e7/4fb/8a6/5e74fb8a6b93439b89786600d8218962.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/incity.png?raw=true"
     },
     {
       "name": "OSTIN",
-      "image": "https://habrastorage.org/web/f4c/a3a/a7b/f4ca3aa7b2904a47a955dcebd11764b5.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/ostin.jpg?raw=true"
     },
     {
       "name": "MEGASPORT",
-      "image": "https://habrastorage.org/web/045/4e3/313/0454e33137eb47a6b0c1d6356679e711.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/megasport.png?raw=true"
+    },
+    {
+      "name": "iSEi",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/iesi.jpg?raw=true"
+    },
+    {
+      "name": "INTERTOP",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/intertop.png?raw=true"
     },
     {
       "name": "Kari club",
-      "image": "https://habrastorage.org/web/336/eab/965/336eab96510f4407b67e77807ab00ee6.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/kari.png?raw=true"
     },
     {
       "name": "Eva",
-      "image": "https://habrastorage.org/web/40a/a9e/2df/40aa9e2dfdaa4967a8971191d499c11a.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/eva.jpg?raw=true"
+    },
+    {
+      "name": "Mexx",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/mex.png?raw=true"
+    },
+    {
+      "name": "Milavitsa",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/milavitsa.jpg?raw=true"
+    },
+    {
+      "name": "Miraton",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/miraton.png?raw=true"
     },
     {
       "name": "PROSTOR",
-      "image": "https://habrastorage.org/web/9ab/68f/0de/9ab68f0deeda4b95b5cfc895340df1a3.jpeg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/prostor.jpeg?raw=true"
     },
     {
       "name": "Аптека Здоров-я",
-      "image": "https://habrastorage.org/web/1f0/f7f/7d7/1f0f7f7d7805403eb68852870c85ae55.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/zdorovie.jpg?raw=true"
     },
     {
       "name": "Аптека низких цен",
-      "image": "https://habrastorage.org/web/136/507/dd8/136507dd832a46cf927ba43e5e3994ae.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/apteka1.jpg?raw=true"
     },
     {
       "name": "Аптека оптовых цен",
-      "image": "https://habrastorage.org/web/1ac/c83/5a1/1acc835a1c2940d1a9a481b8e45b2361.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/apteka_opt.jpg?raw=true"
+    },
+    {
+      "name": "Люксоптика",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/luksoptia.png?raw=true"
+    },
+    {
+      "name": "Happy pills",
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/happy_pills.jpg?raw=true"
     },
     {
       "name": "Танец огня",
-      "image": "https://habrastorage.org/web/66e/a44/fa1/66ea44fa11964e839fa8480b6f4d3f48.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/tanez_ognya.png?raw=true"
     },
     {
       "name": "925",
-      "image": "https://habrastorage.org/web/3bd/a25/fc6/3bda25fc6d5a4da8bc4285c60dfc786c.jpg"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/925.jpg?raw=true"
     },
     {
       "name": "INGLOT",
-      "image": "https://habrastorage.org/web/e20/bd7/815/e20bd78151314171a333ab921d7f7e59.png"
+      "image": "https://github.com/dajver/MyDiscountApp-Android/blob/master/imgs/inglot.png?raw=true"
     }
   ]
 }
