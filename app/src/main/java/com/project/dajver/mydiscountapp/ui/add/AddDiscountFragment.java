@@ -72,6 +72,12 @@ public class AddDiscountFragment extends BaseFragment implements DiscountCardsRe
     }
 
     @Override
+    public void onAddCustomClick() {
+        TransitionHelper.setAddCustomCardIntent(context);
+        TransitionHelper.finish(getContext());
+    }
+
+    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_add_discount_search, menu);
         MenuItem searchItem = menu.findItem(R.id.action_search);
@@ -85,6 +91,7 @@ public class AddDiscountFragment extends BaseFragment implements DiscountCardsRe
     public boolean onQueryTextSubmit(String query) {
         return false;
     }
+
     @Override
     public boolean onQueryTextChange(String s) {
         discountCardsRecyclerAdapter.getFilter().filter(s.toString());

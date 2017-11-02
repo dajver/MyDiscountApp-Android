@@ -8,6 +8,7 @@ import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.db.model.DiscountModel;
 import com.project.dajver.mydiscountapp.etc.parser.model.DataDetailsModel;
 import com.project.dajver.mydiscountapp.ui.add.AddDiscountActivity;
+import com.project.dajver.mydiscountapp.ui.add.custom.CustomCardActivity;
 import com.project.dajver.mydiscountapp.ui.main.MainActivity;
 import com.project.dajver.mydiscountapp.ui.main.details.DiscountDetailsActivity;
 import com.project.dajver.mydiscountapp.ui.main.details.edit.EditDetailsActivity;
@@ -29,6 +30,11 @@ public class TransitionHelper {
 
     public static void setAddIntent(Context context) {
         context.startActivity(new Intent(context, AddDiscountActivity.class));
+        setAnimation(context);
+    }
+
+    public static void setAddCustomCardIntent(Context context) {
+        context.startActivity(new Intent(context, CustomCardActivity.class));
         setAnimation(context);
     }
 

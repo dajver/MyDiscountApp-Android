@@ -6,6 +6,7 @@
     <string name="screen.main">Discounts</string>
     <string name="screen.add">Add discount</string>
     <string name="screen.edit">Edit details</string>
+    <string name="screen.custom">Create custom card</string>
 
     <string name="edittext.name">Name</string>
     <string name="edittext.code">Code</string>
@@ -16,5 +17,15 @@
     <string name="alert.dialog.description">Are you sure that you want delete this item?</string>
     <string name="alert.dialog.yes">Yes</string>
     <string name="alert.dialog.no">No</string>
+
+    <string name="add.custom.card">Add custom card</string>
+    <string name="add.custom.card.error">All fields must be filled</string>
+
+    <string name="profile.dialog.title">Select an image</string>
+    <string name="profile.dialog.photo.library">Photo Library</string>
+    <string name="profile.dialog.take.photo">Take a Photo</string>
+    <string name="profile.dialog.remove.photo">Remove photo</string>
+    <string name="profile.dialog.cancel">Cancel</string>
+    <string name="profile.dialog.ok">OK</string>
 
 </resources>

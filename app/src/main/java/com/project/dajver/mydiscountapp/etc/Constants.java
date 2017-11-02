@@ -11,4 +11,7 @@ public class Constants {
 
     public static final int SPLASH_TIME_OUT = 2000;
     public static final int ON_REFRESH_TIME_OUT = 2000;
+
+    public static final int ITEM_TYPE_NORMAL = 0;
+    public static final int ITEM_TYPE_HEADER = 1;
 }

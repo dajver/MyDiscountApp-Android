@@ -35,6 +35,9 @@
         <activity android:name=".ui.main.details.edit.EditDetailsActivity"
             android:label="@string/screen.edit"/>
 
+        <activity android:name=".ui.add.custom.CustomCardActivity"
+            android:label="@string/screen.custom"/>
+
     </application>
 
 </manifest>

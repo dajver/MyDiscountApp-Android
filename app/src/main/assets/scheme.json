@@ -1,6 +1,10 @@
 {
   "schemes": [
     {
+      "name": "empty",
+      "image": "empty"
+    },
+    {
       "name": "Новая почта",
       "image": "https://habrastorage.org/web/52b/c4d/733/52bc4d733f374a6e8dd87a0269885bbe.png"
     },

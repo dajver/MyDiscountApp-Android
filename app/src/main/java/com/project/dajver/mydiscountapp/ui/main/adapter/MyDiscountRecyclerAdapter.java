@@ -11,6 +11,7 @@ import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.db.model.DiscountModel;
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import butterknife.BindView;
@@ -42,7 +43,14 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Picasso.with(context).load(getItem(position).getImage()).into(holder.image);
+        if(getItem(position).getImage().startsWith("http"))
+            Picasso.with(context)
+                    .load(getItem(position).getImage())
+                    .into(holder.image);
+        else
+            Picasso.with(context)
+                    .load(new File(getItem(position).getImage()))
+                    .into(holder.image);
     }
 
     @Override

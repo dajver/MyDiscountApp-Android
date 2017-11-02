@@ -20,11 +20,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.project.dajver.mydiscountapp.etc.Constants.ITEM_TYPE_HEADER;
+import static com.project.dajver.mydiscountapp.etc.Constants.ITEM_TYPE_NORMAL;
+
 /**
  * Created by gleb on 8/4/17.
  */
 
-public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<DiscountCardsRecyclerAdapter.ViewHolder>
+public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         implements Filterable {
 
     private List<DataDetailsModel> dataModels = new ArrayList<>();
@@ -42,16 +45,34 @@ public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<DiscountC
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.item_discount, parent, false);
-        ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
+    public int getItemViewType(int position) {
+        if (position == 0) {
+            return ITEM_TYPE_HEADER;
+        } else {
+            return ITEM_TYPE_NORMAL;
+        }
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.name.setText(getItem(position).getName());
-        Picasso.with(context).load(getItem(position).getImage()).into(holder.image);
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if (viewType == ITEM_TYPE_NORMAL) {
+            View view = mInflater.inflate(R.layout.item_discount, parent, false);
+            ViewHolder viewHolder = new ViewHolder(view);
+            return viewHolder;
+        } else {
+            View view = mInflater.inflate(R.layout.item_discount_add_custom, parent, false);
+            ViewHeaderHolder viewHolder = new ViewHeaderHolder(view);
+            return viewHolder;
+        }
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
+        final int itemType = getItemViewType(position);
+        if (itemType == ITEM_TYPE_NORMAL) {
+            ((ViewHolder) viewHolder).name.setText(getItem(position).getName());
+            Picasso.with(context).load(getItem(position).getImage()).into(((ViewHolder) viewHolder).image);
+        }
     }
 
     @Override
@@ -75,6 +96,20 @@ public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<DiscountC
         @Override
         public void onClick(View view) {
             if (mClickListener != null) mClickListener.onItemClick(dataModels.get(getAdapterPosition()));
+        }
+    }
+
+    public class ViewHeaderHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+        public ViewHeaderHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            mClickListener.onAddCustomClick();
         }
     }
 
@@ -123,5 +158,6 @@ public class DiscountCardsRecyclerAdapter extends RecyclerView.Adapter<DiscountC
 
     public interface ItemClickListener {
         void onItemClick(DataDetailsModel discountModel);
+        void onAddCustomClick();
     }
 }
