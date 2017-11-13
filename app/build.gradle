@@ -49,4 +49,5 @@ dependencies {
 
     implementation 'com.r0adkll:slidableactivity:2.0.5'
     implementation 'com.mlsdev.rximagepicker:library:2.0.2'
+    implementation 'com.karumi:dexter:4.2.0'
 }

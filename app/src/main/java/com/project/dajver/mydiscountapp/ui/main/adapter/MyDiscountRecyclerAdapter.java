@@ -2,6 +2,7 @@ package com.project.dajver.mydiscountapp.ui.main.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,14 +44,18 @@ public class MyDiscountRecyclerAdapter extends RecyclerView.Adapter<MyDiscountRe
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        if(getItem(position).getImage().startsWith("http"))
-            Picasso.with(context)
-                    .load(getItem(position).getImage())
-                    .into(holder.image);
-        else
-            Picasso.with(context)
-                    .load(new File(getItem(position).getImage()))
-                    .into(holder.image);
+        if(!TextUtils.isEmpty(getItem(position).getImage())) {
+            if (getItem(position).getImage().startsWith("http"))
+                Picasso.with(context)
+                        .load(getItem(position).getImage())
+                        .into(holder.image);
+            else
+                Picasso.with(context)
+                        .load(new File(getItem(position).getImage()))
+                        .into(holder.image);
+        } else {
+            holder.image.setImageResource(R.mipmap.placeholder);
+        }
     }
 
     @Override

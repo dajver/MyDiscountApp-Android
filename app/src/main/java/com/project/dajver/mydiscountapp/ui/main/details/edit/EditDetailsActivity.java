@@ -15,7 +15,7 @@ public class EditDetailsActivity extends BaseActivity {
     }
 
     @Override
-    public boolean isSlidrActive() {
+    public boolean isSliderActive() {
         return true;
     }
 }

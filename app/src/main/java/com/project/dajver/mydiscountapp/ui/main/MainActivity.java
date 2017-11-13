@@ -11,7 +11,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    public boolean isSlidrActive() {
+    public boolean isSliderActive() {
         return false;
     }
 }

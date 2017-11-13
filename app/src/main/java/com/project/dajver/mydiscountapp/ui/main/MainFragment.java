@@ -1,5 +1,6 @@
 package com.project.dajver.mydiscountapp.ui.main;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
@@ -9,6 +10,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.project.dajver.mydiscountapp.R;
 import com.project.dajver.mydiscountapp.db.DiscountController;
 import com.project.dajver.mydiscountapp.db.model.DiscountModel;
@@ -17,6 +23,7 @@ import com.project.dajver.mydiscountapp.ui.BaseFragment;
 import com.project.dajver.mydiscountapp.ui.main.adapter.MyDiscountRecyclerAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -27,7 +34,7 @@ import static com.project.dajver.mydiscountapp.etc.Constants.ON_REFRESH_TIME_OUT
  */
 
 public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdapter.ItemClickListener,
-        SwipeRefreshLayout.OnRefreshListener, SearchView.OnQueryTextListener {
+        SwipeRefreshLayout.OnRefreshListener, SearchView.OnQueryTextListener, MultiplePermissionsListener {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -50,6 +57,17 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
         swipeRefreshLayout.setOnRefreshListener(this);
 
         setupAdapter(discountController.getDiscounts());
+
+        List<String> permissionsList = new ArrayList<>();
+        permissionsList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        permissionsList.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+        permissionsList.add(Manifest.permission.WRITE_SETTINGS);
+        permissionsList.add(Manifest.permission.CAMERA);
+
+        Dexter.withActivity(context)
+                .withPermissions(permissionsList)
+                .withListener(this)
+                .check();
     }
 
     private void setupAdapter(ArrayList<DiscountModel> discountModels) {
@@ -135,4 +153,10 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
             setupAdapter(discountController.getDiscounts());
         return false;
     }
+
+    @Override
+    public void onPermissionsChecked(MultiplePermissionsReport report) { }
+
+    @Override
+    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) { }
 }

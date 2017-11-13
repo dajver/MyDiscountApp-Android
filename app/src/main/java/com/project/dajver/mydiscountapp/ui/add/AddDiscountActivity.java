@@ -17,7 +17,7 @@ public class AddDiscountActivity extends BaseActivity {
     }
 
     @Override
-    public boolean isSlidrActive() {
+    public boolean isSliderActive() {
         return true;
     }
 

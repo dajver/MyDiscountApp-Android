@@ -19,17 +19,17 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getItemId());
         ButterKnife.bind(this);
-        if(isSlidrActive())
+        if(isSliderActive())
             Slidr.attach(this);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if(isSlidrActive())
+        if(isSliderActive())
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 
     public abstract int getItemId();
-    public abstract boolean isSlidrActive();
+    public abstract boolean isSliderActive();
 }

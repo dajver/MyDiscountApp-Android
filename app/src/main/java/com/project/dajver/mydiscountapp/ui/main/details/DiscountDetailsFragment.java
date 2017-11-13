@@ -1,6 +1,9 @@
 package com.project.dajver.mydiscountapp.ui.main.details;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -55,7 +58,17 @@ public class DiscountDetailsFragment extends BaseFragment implements SwipeRefres
         swipeRefreshLayout.setOnRefreshListener(this);
         setupViews();
 
-        Settings.System.putInt(getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 20);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Settings.System.canWrite(context)) {
+                Settings.System.putInt(getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 20);
+            }
+            else {
+                Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        }
         WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
         lp.screenBrightness = 1;
         getActivity().getWindow().setAttributes(lp);
