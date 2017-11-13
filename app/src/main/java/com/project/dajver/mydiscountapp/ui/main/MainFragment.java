@@ -1,6 +1,5 @@
 package com.project.dajver.mydiscountapp.ui.main;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
@@ -77,18 +76,11 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
         builder.setTitle(getString(R.string.alert_dialog_title))
                 .setMessage(getString(R.string.alert_dialog_description))
                 .setCancelable(false)
-                .setNegativeButton(getString(R.string.alert_dialog_no), new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        })
-                .setPositiveButton(getString(R.string.alert_dialog_yes), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        new DiscountController(getContext()).removeItemById(id);
-                        onRefresh();
-                        dialogInterface.cancel();
-                    }
+                .setNegativeButton(getString(R.string.alert_dialog_no), (dialog, id1) -> dialog.cancel())
+                .setPositiveButton(getString(R.string.alert_dialog_yes), (dialogInterface, i) -> {
+                    new DiscountController(getContext()).removeItemById(id);
+                    onRefresh();
+                    dialogInterface.cancel();
                 });
         AlertDialog alert = builder.create();
         alert.show();
@@ -124,12 +116,9 @@ public class MainFragment extends BaseFragment implements MyDiscountRecyclerAdap
     @Override
     public void onRefresh() {
         swipeRefreshLayout.setRefreshing(true);
-        swipeRefreshLayout.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                swipeRefreshLayout.setRefreshing(false);
-                setupAdapter(discountController.getDiscounts());
-            }
+        swipeRefreshLayout.postDelayed(() -> {
+            swipeRefreshLayout.setRefreshing(false);
+            setupAdapter(discountController.getDiscounts());
         }, ON_REFRESH_TIME_OUT);
     }
 

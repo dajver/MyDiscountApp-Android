@@ -1,9 +1,7 @@
 package com.project.dajver.mydiscountapp.ui.add.custom;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.ArrayAdapter;
@@ -23,12 +21,9 @@ import com.project.dajver.mydiscountapp.ui.BaseFragment;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
 
 import static android.app.Activity.RESULT_CANCELED;
 
@@ -86,36 +81,22 @@ public class CustomCardFragment extends BaseFragment {
         arrayAdapter.add(getString(R.string.profile_dialog_photo_library));
         arrayAdapter.add(getString(R.string.profile_dialog_take_photo));
 
-        builderSingle.setNegativeButton(getString(R.string.profile_dialog_cancel), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
+        builderSingle.setNegativeButton(getString(R.string.profile_dialog_cancel), (dialog, which) -> dialog.dismiss());
 
-        builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case 0:
-                        RxImagePicker.with(getContext()).requestMultipleImages().subscribe(new Consumer<List<Uri>>() {
-                            @Override
-                            public void accept(@NonNull List<Uri> uris) throws Exception {
-                                imagePath = ImageFilePathUtils.getPath(context, uris.get(0));
-                                Picasso.with(context).load(new File(imagePath.toString())).into(cardImg);
-                            }
-                        });
-                        break;
-                    case 1:
-                        RxImagePicker.with(context).requestImage(Sources.CAMERA).subscribe(new Consumer<Uri>() {
-                            @Override
-                            public void accept(@NonNull Uri uri) throws Exception {
-                                imagePath = ImageFilePathUtils.getPath(context, uri);
-                                Picasso.with(context).load(new File(imagePath.toString())).into(cardImg);
-                            }
-                        });
-                        break;
-                }
+        builderSingle.setAdapter(arrayAdapter, (dialog, which) -> {
+            switch (which) {
+                case 0:
+                    RxImagePicker.with(getContext()).requestMultipleImages().subscribe(uris -> {
+                        imagePath = ImageFilePathUtils.getPath(context, uris.get(0));
+                        Picasso.with(context).load(new File(imagePath.toString())).into(cardImg);
+                    });
+                    break;
+                case 1:
+                    RxImagePicker.with(context).requestImage(Sources.CAMERA).subscribe(uri -> {
+                        imagePath = ImageFilePathUtils.getPath(context, uri);
+                        Picasso.with(context).load(new File(imagePath.toString())).into(cardImg);
+                    });
+                    break;
             }
         });
         builderSingle.show();

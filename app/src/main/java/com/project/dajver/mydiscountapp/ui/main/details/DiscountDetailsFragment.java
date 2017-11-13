@@ -73,12 +73,9 @@ public class DiscountDetailsFragment extends BaseFragment implements SwipeRefres
     @Override
     public void onRefresh() {
         swipeRefreshLayout.setRefreshing(true);
-        swipeRefreshLayout.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                swipeRefreshLayout.setRefreshing(false);
-                setupViews();
-            }
+        swipeRefreshLayout.postDelayed(() -> {
+            swipeRefreshLayout.setRefreshing(false);
+            setupViews();
         }, ON_REFRESH_TIME_OUT);
     }
 

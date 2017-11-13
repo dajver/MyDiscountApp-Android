@@ -40,7 +40,7 @@
 
         <ImageView
             android:id="@+id/barcodeScanner"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:onClick="onBarcodeScannerClick"
             app:srcCompat="@mipmap/ic_barcode" />
